@@ -1,9 +1,22 @@
 import { Component } from '@angular/core';
 
 @Component({
-  imports: [],
   selector: 'app-hero',
-  styleUrl: './hero.scss',
+  standalone: true,
+  imports: [],
   templateUrl: './hero.html',
+  styleUrl: './hero.scss'
 })
-export class Hero {}
+export class Hero {
+  scrollToCapabilities(): void {
+    document
+      .getElementById('capabilities')
+      ?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  scrollToRfq(): void {
+    document
+      .getElementById('rfq')
+      ?.scrollIntoView({ behavior: 'smooth' });
+  }
+}
