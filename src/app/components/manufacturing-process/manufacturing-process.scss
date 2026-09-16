@@ -1,0 +1,509 @@
+:host {
+  display: block;
+}
+
+.process-section {
+  position: relative;
+
+  padding: 125px 4%;
+
+  overflow: hidden;
+
+  background: #f7f9fc;
+}
+
+.process-section::before {
+  content: '';
+
+  position: absolute;
+
+  top: -220px;
+  right: -170px;
+
+  width: 600px;
+  height: 600px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(8, 116, 223, 0.07),
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
+
+.process-container {
+  position: relative;
+
+  width: min(1380px, 100%);
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.process-header {
+  margin-bottom: 75px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(300px, 0.55fr);
+
+  align-items: end;
+
+  gap: 80px;
+}
+
+.section-label {
+  margin-bottom: 18px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  color: #0874df;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2.2px;
+}
+
+.section-label > span {
+  width: 31px;
+  height: 2px;
+
+  border-radius: 20px;
+
+  background: #0879e9;
+}
+
+.process-header h2 {
+  max-width: 760px;
+
+  color: #091f3a;
+
+  font-size: clamp(43px, 4vw, 62px);
+  font-weight: 800;
+
+  line-height: 1.04;
+
+  letter-spacing: -3px;
+}
+
+.process-header h2 span {
+  display: block;
+
+  color: #0874df;
+}
+
+.process-header > p {
+  padding-bottom: 4px;
+
+  color: #748294;
+
+  font-size: 12px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================
+   PROCESS FLOW
+========================= */
+
+.process-flow {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(6, minmax(0, 1fr));
+
+  gap: 0;
+}
+
+.process-line {
+  position: absolute;
+
+  top: 55px;
+  left: 5%;
+  right: 5%;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #b9d9f7,
+      #0878e8,
+      #b9d9f7
+    );
+}
+
+
+/* =========================
+   STEP
+========================= */
+
+.process-step {
+  position: relative;
+
+  min-height: 310px;
+
+  padding: 0 22px;
+
+  border-right: 1px solid #e0e8f0;
+}
+
+.process-step:first-of-type {
+  padding-left: 0;
+}
+
+.process-step:last-child {
+  padding-right: 0;
+
+  border-right: none;
+}
+
+
+/* =========================
+   STEP TOP
+========================= */
+
+.step-top {
+  position: relative;
+
+  height: 90px;
+}
+
+.step-number {
+  color: #a0adba;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.step-node {
+  position: absolute;
+
+  top: 45px;
+  left: 0;
+
+  width: 21px;
+  height: 21px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid #9bc9f4;
+  border-radius: 50%;
+
+  background: #f7f9fc;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.step-node span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #0878e8;
+}
+
+.process-step:hover .step-node {
+  transform: scale(1.2);
+
+  border-color: #0878e8;
+
+  background: #0878e8;
+}
+
+.process-step:hover .step-node span {
+  background: #fff;
+}
+
+
+/* =========================
+   STEP CONTENT
+========================= */
+
+.step-content {
+  padding-top: 12px;
+}
+
+.step-content small {
+  color: #0874df;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.step-content h3 {
+  margin-top: 9px;
+
+  color: #173650;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.5px;
+}
+
+.step-content p {
+  margin-top: 13px;
+
+  color: #7a8998;
+
+  font-size: 9px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================
+   BOTTOM
+========================= */
+
+.process-bottom {
+  margin-top: 35px;
+
+  padding: 22px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  border: 1px solid #dfe8f1;
+  border-radius: 14px;
+
+  background: #fff;
+
+  box-shadow:
+    0 10px 30px rgba(7, 31, 58, 0.04);
+}
+
+.process-message {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.message-dot {
+  width: 10px;
+  height: 10px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #0878e8;
+
+  box-shadow:
+    0 0 0 7px rgba(8, 120, 232, 0.09);
+}
+
+.process-message > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.process-message small {
+  color: #8a98a7;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+}
+
+.process-message strong {
+  color: #203b57;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.process-cta {
+  min-width: 190px;
+  height: 48px;
+
+  padding: 0 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1084f8,
+      #0759c5
+    );
+
+  color: #fff;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  box-shadow:
+    0 9px 22px rgba(8, 103, 216, 0.17);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.process-cta:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 28px rgba(8, 103, 216, 0.25);
+}
+
+.process-cta span {
+  font-size: 17px;
+
+  transition: transform 0.25s ease;
+}
+
+.process-cta:hover span {
+  transform: translateX(4px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+  .process-flow {
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    row-gap: 40px;
+  }
+
+  .process-line {
+    display: none;
+  }
+
+  .process-step {
+    min-height: 260px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .process-section {
+    padding: 85px 20px;
+  }
+
+  .process-header {
+    margin-bottom: 50px;
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .process-header h2 {
+    font-size: 40px;
+
+    letter-spacing: -2px;
+  }
+
+  .process-flow {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+  .process-step {
+    min-height: auto;
+
+    padding: 25px 0;
+
+    display: grid;
+
+    grid-template-columns: 55px 1fr;
+
+    gap: 18px;
+
+    border-right: none;
+    border-bottom: 1px solid #dfe8f1;
+  }
+
+  .step-top {
+    height: auto;
+  }
+
+  .step-node {
+    top: 31px;
+  }
+
+  .step-content {
+    padding: 0;
+  }
+
+  .step-content h3 {
+    font-size: 20px;
+  }
+
+  .step-content p {
+    max-width: 500px;
+  }
+
+  .process-bottom {
+    align-items: stretch;
+    flex-direction: column;
+
+    margin-top: 30px;
+  }
+
+  .process-cta {
+    width: 100%;
+  }
+
+}

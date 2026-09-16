@@ -1,1 +1,88 @@
-<p>industries works!</p>
+<section class="industries-section" id="industries">
+
+  <div class="industries-container">
+
+    <div class="industries-layout">
+
+      <!-- LEFT -->
+      <div class="industries-intro">
+
+        <div class="section-label">
+          <span></span>
+          INDUSTRIES WE SERVE
+        </div>
+
+        <h2>
+          Engineered for
+          <span>Demanding Industries.</span>
+        </h2>
+
+        <p>
+          Our manufacturing approach is built around the performance,
+          consistency and reliability required across critical industrial
+          applications.
+        </p>
+
+        <div class="intro-line"></div>
+
+        <div class="industry-note">
+          <small>APPLICATION-DRIVEN MANUFACTURING</small>
+
+          <strong>
+            From drawing to production-ready casting.
+          </strong>
+        </div>
+
+        <a href="#rfq" class="industry-cta">
+          Discuss Your Application
+          <span>→</span>
+        </a>
+
+      </div>
+
+
+      <!-- RIGHT -->
+      <div class="industries-list">
+
+        @for (
+          industry of industries;
+          track industry.number
+        ) {
+
+          <article class="industry-row">
+
+            <div class="industry-number">
+              {{ industry.number }}
+            </div>
+
+            <div class="industry-content">
+
+              <h3>
+                {{ industry.title }}
+              </h3>
+
+              <p>
+                {{ industry.description }}
+              </p>
+
+              <small>
+                {{ industry.applications }}
+              </small>
+
+            </div>
+
+            <div class="industry-arrow">
+              ↗
+            </div>
+
+          </article>
+
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

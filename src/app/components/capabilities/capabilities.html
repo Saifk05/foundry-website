@@ -1,1 +1,196 @@
-<p>capabilities works!</p>
+<section class="capabilities-section" id="capabilities">
+
+  <div class="background-grid"></div>
+  <div class="ambient-glow"></div>
+
+  <div class="capabilities-container">
+
+    <!-- HEADER -->
+    <div class="section-header">
+
+      <div class="header-copy">
+
+        <div class="section-label">
+          <span></span>
+          MANUFACTURING CAPABILITIES
+        </div>
+
+        <h2>
+          From Molten Metal
+          <span>to Engineered Component.</span>
+        </h2>
+
+      </div>
+
+      <div class="header-description">
+        <p>
+          An integrated manufacturing approach built around process
+          control, engineering discipline and dependable production.
+        </p>
+
+        <a href="#rfq">
+          Discuss Your Requirement
+          <span>→</span>
+        </a>
+      </div>
+
+    </div>
+
+
+    <!-- CAPABILITY CARDS -->
+    <div class="capabilities-grid">
+
+      @for (capability of capabilities; track capability.number) {
+
+        <article class="capability-card">
+
+          <div class="card-top">
+
+            <span class="number">
+              {{ capability.number }}
+            </span>
+
+            <div class="icon-box">
+
+              @switch (capability.icon) {
+
+                @case ('melting') {
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 3c2 3 4 5 4 8a4 4 0 1 1-8 0c0-2 1-4 4-8z"></path>
+                    <path d="M12 11c1 1.3 2 2.3 2 3.6a2 2 0 1 1-4 0c0-1 .6-2.1 2-3.6z"></path>
+                  </svg>
+                }
+
+                @case ('moulding') {
+                  <svg viewBox="0 0 24 24">
+                    <path d="m12 3 8 4-8 4-8-4 8-4z"></path>
+                    <path d="m4 12 8 4 8-4"></path>
+                    <path d="m4 17 8 4 8-4"></path>
+                  </svg>
+                }
+
+                @case ('machining') {
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M12 2v3M12 19v3M4.9 4.9 7 7M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1 7 17M17 7l2.1-2.1"></path>
+                  </svg>
+                }
+
+                @case ('quality') {
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 3l7 3v5c0 4.7-2.8 8-7 10-4.2-2-7-5.3-7-10V6l7-3z"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                }
+
+              }
+
+            </div>
+
+          </div>
+
+          <div class="card-content">
+
+            <h3>{{ capability.title }}</h3>
+
+            <p>
+              {{ capability.description }}
+            </p>
+
+            <div class="spec-list">
+
+              @for (spec of capability.specs; track spec) {
+
+                <div class="spec">
+                  <span></span>
+                  {{ spec }}
+                </div>
+
+              }
+
+            </div>
+
+          </div>
+
+          <div class="card-line"></div>
+
+        </article>
+
+      }
+
+    </div>
+
+
+    <!-- TECHNICAL STRIP -->
+    <div class="technical-strip">
+
+      <div class="technical-intro">
+
+        <span class="pulse"></span>
+
+        <div>
+          <small>ENGINEERING CAPABILITY</small>
+          <strong>
+            Built around your drawing.
+          </strong>
+        </div>
+
+      </div>
+
+
+      <div class="technical-values">
+
+        <div>
+          <small>CASTING RANGE</small>
+          <strong>
+            0.5 – 100 kg
+          </strong>
+        </div>
+
+        <span class="separator"></span>
+
+        <div>
+          <small>MATERIALS</small>
+          <strong>
+            Grey & SG Iron
+          </strong>
+        </div>
+
+        <span class="separator"></span>
+
+        <div>
+          <small>PRODUCTION</small>
+          <strong>
+            Prototype → Series
+          </strong>
+        </div>
+
+        <span class="separator"></span>
+
+        <div>
+          <small>SUPPLY</small>
+          <strong>
+            Raw / Machined
+          </strong>
+        </div>
+
+      </div>
+
+
+      <a href="#rfq" class="drawing-button">
+
+        <svg viewBox="0 0 24 24">
+          <path d="M12 3v12"></path>
+          <path d="m8 11 4 4 4-4"></path>
+          <path d="M5 20h14"></path>
+        </svg>
+
+        Upload Drawing
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>

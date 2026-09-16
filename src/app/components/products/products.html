@@ -1,1 +1,146 @@
-<p>products works!</p>
+<section class="products-section" id="products">
+
+  <div class="products-container">
+
+    <!-- SECTION HEADER -->
+    <div class="products-header">
+
+      <div class="header-left">
+
+        <div class="section-label">
+          <span></span>
+          CASTING SOLUTIONS
+        </div>
+
+        <h2>
+          Components Built for
+          <span>Real-World Performance.</span>
+        </h2>
+
+      </div>
+
+      <div class="header-right">
+
+        <p>
+          From complex industrial housings to production-critical
+          components, we manufacture castings around customer drawings,
+          material requirements and application demands.
+        </p>
+
+        <a href="#rfq">
+          Have a custom component?
+          <strong>
+            Send us your drawing
+            <span>→</span>
+          </strong>
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRODUCT IMAGE GRID -->
+    <div class="product-grid">
+
+      @for (
+        category of categories;
+        track category.number
+      ) {
+
+        <article class="product-card">
+
+          <!-- PRODUCT IMAGE -->
+          <img
+            [src]="category.image"
+            [alt]="category.title"
+            loading="lazy"
+          />
+
+          <!-- IMAGE SHADING -->
+          <div class="image-overlay"></div>
+
+          <!-- CATEGORY NUMBER -->
+          <div class="product-number">
+            {{ category.number }}
+          </div>
+
+          <!-- VIEW ICON -->
+          <div class="product-arrow">
+            ↗
+          </div>
+
+          <!-- PRODUCT CONTENT -->
+          <div class="product-content">
+
+            <span class="product-label">
+              CASTING SOLUTION
+            </span>
+
+            <h3>
+              {{ category.title }}
+            </h3>
+
+            <p>
+              {{ category.subtitle }}
+            </p>
+
+          </div>
+
+        </article>
+
+      }
+
+    </div>
+
+
+    <!-- CUSTOM CASTING CTA -->
+    <div class="products-bottom">
+
+      <div class="custom-message">
+
+        <div class="custom-icon">
+
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M4 20V8l5 3V7l5 3V5l6 4v11">
+            </path>
+
+            <path
+              d="M2 20h20">
+            </path>
+          </svg>
+
+        </div>
+
+        <div class="custom-copy">
+
+          <small>
+            NEED A CUSTOM CASTING?
+          </small>
+
+          <strong>
+            Share your drawing. We'll review the manufacturing requirement.
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <a
+        href="#rfq"
+        class="rfq-button"
+      >
+
+        Submit Your Requirement
+
+        <span>→</span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>

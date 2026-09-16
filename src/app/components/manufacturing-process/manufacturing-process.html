@@ -1,1 +1,103 @@
-<p>manufacturing-process works!</p>
+<section class="process-section" id="process">
+
+  <div class="process-container">
+
+    <!-- HEADER -->
+    <div class="process-header">
+
+      <div>
+
+        <div class="section-label">
+          <span></span>
+          MANUFACTURING PROCESS
+        </div>
+
+        <h2>
+          From Drawing to
+          <span>Finished Casting.</span>
+        </h2>
+
+      </div>
+
+      <p>
+        A structured manufacturing workflow designed around process
+        control, repeatability and consistent component quality.
+      </p>
+
+    </div>
+
+
+    <!-- PROCESS FLOW -->
+    <div class="process-flow">
+
+      <div class="process-line"></div>
+
+      @for (
+        step of steps;
+        track step.number
+      ) {
+
+        <article class="process-step">
+
+          <div class="step-top">
+
+            <div class="step-number">
+              {{ step.number }}
+            </div>
+
+            <div class="step-node">
+              <span></span>
+            </div>
+
+          </div>
+
+          <div class="step-content">
+
+            <small>
+              {{ step.label }}
+            </small>
+
+            <h3>
+              {{ step.title }}
+            </h3>
+
+            <p>
+              {{ step.description }}
+            </p>
+
+          </div>
+
+        </article>
+
+      }
+
+    </div>
+
+
+    <!-- BOTTOM STRIP -->
+    <div class="process-bottom">
+
+      <div class="process-message">
+
+        <span class="message-dot"></span>
+
+        <div>
+          <small>END-TO-END MANUFACTURING</small>
+
+          <strong>
+            One controlled workflow. From engineering input to final component.
+          </strong>
+        </div>
+
+      </div>
+
+      <a href="#rfq" class="process-cta">
+        Start Your Project
+        <span>→</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
