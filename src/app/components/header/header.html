@@ -1,0 +1,69 @@
+<header class="header-shell">
+  <div class="glass-header">
+
+    <a href="#home" class="brand">
+      <div class="brand-mark">
+        <span class="mark-a">A</span>
+      </div>
+
+      <div class="brand-copy">
+        <strong>ATANA</strong>
+        <span>CASTINGS</span>
+      </div>
+    </a>
+
+    <nav class="desktop-nav">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#products">Products</a>
+      <a href="#infrastructure">Infrastructure</a>
+      <a href="#quality">Quality</a>
+      <a href="#industries">Industries</a>
+    </nav>
+
+    <div class="header-actions">
+
+      <button class="search-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="M20 20l-3.5-3.5"></path>
+        </svg>
+      </button>
+
+      <a href="#rfq" class="quote-btn">
+        <span>Request a Quote</span>
+
+        <div class="arrow">
+          →
+        </div>
+      </a>
+
+      <button
+        class="menu-btn"
+        type="button"
+        aria-label="Menu"
+        (click)="toggleMenu()"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </div>
+
+  <div class="mobile-menu" [class.open]="menuOpen">
+    <a href="#home" (click)="closeMenu()">Home</a>
+    <a href="#about" (click)="closeMenu()">About</a>
+    <a href="#capabilities" (click)="closeMenu()">Capabilities</a>
+    <a href="#products" (click)="closeMenu()">Products</a>
+    <a href="#infrastructure" (click)="closeMenu()">Infrastructure</a>
+    <a href="#quality" (click)="closeMenu()">Quality</a>
+    <a href="#industries" (click)="closeMenu()">Industries</a>
+
+    <a href="#rfq" class="mobile-rfq" (click)="closeMenu()">
+      Request a Quote →
+    </a>
+  </div>
+</header>

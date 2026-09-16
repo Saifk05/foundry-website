@@ -1,0 +1,62 @@
+<section class="stats-section" aria-label="Company statistics">
+
+  <div class="stats-shell">
+
+    @for (stat of stats; track stat.label; let last = $last) {
+
+      <article class="stat">
+
+        <div class="stat-value">
+          {{ stat.value }}
+
+          @if (stat.label === 'MT Annual Capacity') {
+            <span>MT</span>
+          }
+        </div>
+
+        <div class="stat-content">
+          <strong>{{ stat.label }}</strong>
+          <span>{{ stat.description }}</span>
+        </div>
+
+      </article>
+
+      @if (!last) {
+        <div class="divider"></div>
+      }
+
+    }
+
+  </div>
+
+  <div class="trust-line">
+
+    <span class="trust-label">
+      BUILT FOR DEMANDING INDUSTRIES
+    </span>
+
+    <div class="trust-items">
+      <span>
+        <i></i>
+        Automotive
+      </span>
+
+      <span>
+        <i></i>
+        Agriculture
+      </span>
+
+      <span>
+        <i></i>
+        Infrastructure
+      </span>
+
+      <span>
+        <i></i>
+        Industrial
+      </span>
+    </div>
+
+  </div>
+
+</section>
