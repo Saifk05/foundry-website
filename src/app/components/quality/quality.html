@@ -1,1 +1,185 @@
-<p>quality works!</p>
+<section class="quality-section" id="quality">
+
+  <div class="quality-container">
+
+    <!-- HEADER -->
+    <div class="quality-header">
+
+      <div>
+
+        <div class="section-label">
+          <span></span>
+          QUALITY ASSURANCE
+        </div>
+
+        <h2>
+          Quality Built Into
+          <span>Every Process.</span>
+        </h2>
+
+      </div>
+
+      <div class="quality-intro">
+
+        <p>
+          Quality is integrated throughout manufacturing — from material
+          verification and process monitoring to dimensional inspection
+          and final dispatch approval.
+        </p>
+
+        <a href="#rfq">
+          Discuss Quality Requirements
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- MAIN QUALITY PANEL -->
+    <div class="quality-panel">
+
+      <!-- LEFT -->
+      <div class="quality-main">
+
+        <div class="quality-badge">
+          <span class="badge-icon">✓</span>
+
+          <div>
+            <small>QUALITY SYSTEM</small>
+            <strong>Controlled. Verified. Traceable.</strong>
+          </div>
+        </div>
+
+        <h3>
+          Confidence at
+          <span>Every Stage.</span>
+        </h3>
+
+        <p>
+          Our approach focuses on preventing variation rather than
+          detecting it only at the end of production.
+        </p>
+
+
+        <!-- QUALITY FLOW -->
+        <div class="quality-flow">
+
+          @for (
+            metric of metrics;
+            track metric.value
+          ) {
+
+            <div class="flow-item">
+
+              <div class="flow-number">
+                {{ metric.value }}
+              </div>
+
+              <span>
+                {{ metric.label }}
+              </span>
+
+            </div>
+
+          }
+
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT -->
+      <div class="quality-controls">
+
+        @for (
+          control of controls;
+          track control.number
+        ) {
+
+          <article class="quality-control">
+
+            <div class="control-number">
+              {{ control.number }}
+            </div>
+
+            <div class="control-content">
+
+              <h4>
+                {{ control.title }}
+              </h4>
+
+              <p>
+                {{ control.description }}
+              </p>
+
+            </div>
+
+            <div class="control-check">
+              ✓
+            </div>
+
+          </article>
+
+        }
+
+      </div>
+
+    </div>
+
+
+    <!-- CERTIFICATION AREA -->
+    <div class="certification-strip">
+
+      <div class="certification-heading">
+
+        <div class="certification-icon">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3l7 3v5c0 4.5-2.8 8-7 10-4.2-2-7-5.5-7-10V6z"></path>
+            <path d="M9 12l2 2 4-4"></path>
+          </svg>
+
+        </div>
+
+        <div>
+          <small>QUALITY DOCUMENTATION</small>
+
+          <strong>
+            Documentation aligned with customer requirements.
+          </strong>
+        </div>
+
+      </div>
+
+
+      <div class="certification-items">
+
+        <div>
+          <span>01</span>
+          <strong>Material Records</strong>
+        </div>
+
+        <div>
+          <span>02</span>
+          <strong>Inspection Reports</strong>
+        </div>
+
+        <div>
+          <span>03</span>
+          <strong>Process Traceability</strong>
+        </div>
+
+        <div>
+          <span>04</span>
+          <strong>Customer Documentation</strong>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

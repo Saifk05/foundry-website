@@ -1,0 +1,655 @@
+:host {
+  display: block;
+}
+
+.global-section {
+  position: relative;
+
+  padding: 125px 4%;
+
+  overflow: hidden;
+
+  background: #f7f9fc;
+}
+
+.global-container {
+  width: min(1380px, 100%);
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.global-header {
+  margin-bottom: 55px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(300px, 0.6fr);
+
+  align-items: end;
+
+  gap: 80px;
+}
+
+.section-label {
+  margin-bottom: 18px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  color: #0874df;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2.2px;
+}
+
+.section-label > span {
+  width: 31px;
+  height: 2px;
+
+  border-radius: 20px;
+
+  background: #0879e9;
+}
+
+.global-header h2 {
+  max-width: 850px;
+
+  color: #091f3a;
+
+  font-size: clamp(43px, 4vw, 62px);
+  font-weight: 800;
+
+  line-height: 1.04;
+
+  letter-spacing: -3px;
+}
+
+.global-header h2 span {
+  display: block;
+
+  color: #0874df;
+}
+
+.header-copy p {
+  color: #748294;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+.header-copy a {
+  margin-top: 18px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #0874df;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.header-copy a span {
+  font-size: 16px;
+
+  transition: transform 0.25s ease;
+}
+
+.header-copy a:hover span {
+  transform: translateX(4px);
+}
+
+
+/* =========================
+   MAIN PANEL
+========================= */
+
+.global-panel {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.35fr)
+    minmax(350px, 0.65fr);
+
+  min-height: 620px;
+
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  background: #061a30;
+
+  box-shadow:
+    0 28px 70px rgba(7, 31, 58, 0.14);
+}
+
+
+/* =========================
+   MAP
+========================= */
+
+.map-area {
+  position: relative;
+
+  min-height: 620px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 65% 45%,
+      rgba(20, 136, 247, 0.18),
+      transparent 31%
+    ),
+    linear-gradient(
+      145deg,
+      #061a30,
+      #092844
+    );
+}
+
+.map-grid {
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.22;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.06) 1px,
+      transparent 1px
+    );
+
+  background-size: 45px 45px;
+}
+
+.world-map {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 90%;
+
+  transform:
+    translate(-50%, -50%);
+}
+
+.world-map path {
+  fill:
+    rgba(93, 151, 199, 0.14);
+
+  stroke:
+    rgba(118, 181, 232, 0.28);
+
+  stroke-width: 1;
+}
+
+
+/* =========================
+   CONNECTIONS
+========================= */
+
+.connection-lines {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+}
+
+.connection-lines path {
+  fill: none;
+
+  stroke:
+    rgba(73, 169, 255, 0.28);
+
+  stroke-width: 1;
+
+  stroke-dasharray: 6 8;
+}
+
+
+/* =========================
+   LOCATIONS
+========================= */
+
+.location {
+  position: absolute;
+
+  z-index: 4;
+}
+
+.location > span {
+  display: block;
+
+  width: 9px;
+  height: 9px;
+
+  border: 2px solid #8bcbff;
+
+  border-radius: 50%;
+
+  background: #0878e8;
+
+  box-shadow:
+    0 0 0 6px rgba(8, 120, 232, 0.12);
+}
+
+.india {
+  top: 43%;
+  left: 65%;
+}
+
+.europe {
+  top: 30%;
+  left: 48%;
+}
+
+.america {
+  top: 31%;
+  left: 18%;
+}
+
+.australia {
+  top: 68%;
+  left: 82%;
+}
+
+
+/* =========================
+   INDIA PULSE
+========================= */
+
+.india .pulse {
+  position: relative;
+
+  width: 13px;
+  height: 13px;
+
+  background: #42a9ff;
+
+  border: 3px solid #d5edff;
+
+  box-shadow:
+    0 0 0 7px rgba(39, 156, 255, 0.18);
+}
+
+.india .pulse::after {
+  content: '';
+
+  position: absolute;
+
+  inset: -11px;
+
+  border:
+    1px solid rgba(86, 177, 255, 0.5);
+
+  border-radius: 50%;
+
+  animation:
+    mapPulse 2.2s infinite;
+}
+
+@keyframes mapPulse {
+
+  0% {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+
+}
+
+.location-label {
+  position: absolute;
+
+  top: 21px;
+  left: -8px;
+
+  min-width: 125px;
+
+  padding: 9px 11px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 8px;
+
+  background:
+    rgba(4, 25, 46, 0.75);
+
+  backdrop-filter: blur(12px);
+}
+
+.location-label small {
+  color: #68b9ff;
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.location-label strong {
+  color: #ffffff;
+
+  font-size: 10px;
+}
+
+
+/* =========================
+   MAP CAPTION
+========================= */
+
+.map-caption {
+  position: absolute;
+
+  left: 30px;
+  bottom: 28px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.map-caption small {
+  color: #57adff;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+}
+
+.map-caption strong {
+  color:
+    rgba(255, 255, 255, 0.8);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   RIGHT CONTENT
+========================= */
+
+.global-content {
+  padding: 55px 45px;
+
+  background:
+    linear-gradient(
+      160deg,
+      rgba(255,255,255,0.045),
+      rgba(255,255,255,0.015)
+    );
+
+  border-left:
+    1px solid rgba(255, 255, 255, 0.08);
+}
+
+.global-eyebrow {
+  color: #58afff;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.global-content h3 {
+  margin-top: 18px;
+
+  color: #ffffff;
+
+  font-size: clamp(32px, 3vw, 43px);
+  font-weight: 800;
+
+  line-height: 1.06;
+
+  letter-spacing: -2px;
+}
+
+.global-content h3 span {
+  display: block;
+
+  color: #58afff;
+}
+
+.global-description {
+  margin-top: 20px;
+
+  color:
+    rgba(214, 229, 243, 0.58);
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   CAPABILITIES
+========================= */
+
+.global-capabilities {
+  margin-top: 35px;
+
+  border-top:
+    1px solid rgba(255,255,255,0.1);
+}
+
+.global-capability {
+  padding: 20px 0;
+
+  display: grid;
+
+  grid-template-columns:
+    35px
+    minmax(0, 1fr);
+
+  gap: 12px;
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.1);
+}
+
+.global-capability > span {
+  padding-top: 2px;
+
+  color: #57adff;
+
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.global-capability strong {
+  color:
+    rgba(255,255,255,0.88);
+
+  font-size: 10px;
+}
+
+.global-capability p {
+  margin-top: 6px;
+
+  color:
+    rgba(207,224,239,0.48);
+
+  font-size: 8px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.global-cta {
+  width: 100%;
+  height: 50px;
+
+  margin-top: 30px;
+
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1084f8,
+      #0759c5
+    );
+
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.global-cta:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 28px rgba(8, 105, 218, 0.28);
+}
+
+.global-cta span {
+  font-size: 17px;
+
+  transition: transform 0.25s ease;
+}
+
+.global-cta:hover span {
+  transform: translateX(4px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .global-header {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .header-copy {
+    max-width: 650px;
+  }
+
+  .global-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .map-area {
+    min-height: 550px;
+  }
+
+  .global-content {
+    border-top:
+      1px solid rgba(255,255,255,0.08);
+
+    border-left: none;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .global-section {
+    padding: 85px 20px;
+  }
+
+  .global-header h2 {
+    font-size: 40px;
+
+    letter-spacing: -2px;
+  }
+
+  .global-panel {
+    border-radius: 16px;
+  }
+
+  .map-area {
+    min-height: 400px;
+  }
+
+  .world-map {
+    width: 115%;
+  }
+
+  .connection-lines {
+    opacity: 0.65;
+  }
+
+  .location-label {
+    display: none;
+  }
+
+  .map-caption {
+    left: 20px;
+    bottom: 20px;
+  }
+
+  .global-content {
+    padding: 38px 25px;
+  }
+
+  .global-content h3 {
+    font-size: 35px;
+  }
+
+}

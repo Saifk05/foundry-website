@@ -1,1 +1,205 @@
-<p>clients works!</p>
+<section class="clients-section" id="clients">
+
+  <div class="clients-container">
+
+    <!-- TOP -->
+    <div class="clients-header">
+
+      <div>
+
+        <div class="section-label">
+          <span></span>
+          BUILT FOR B2B PARTNERSHIPS
+        </div>
+
+        <h2>
+          Manufacturing That
+          <span>Supports Your Supply Chain.</span>
+        </h2>
+
+      </div>
+
+      <div class="header-copy">
+
+        <p>
+          We work around technical requirements, production expectations
+          and the communication standards engineering and sourcing teams
+          expect from a manufacturing partner.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- CUSTOMER SEGMENTS -->
+    <div class="segment-grid">
+
+      @for (
+        segment of segments;
+        track segment.number
+      ) {
+
+        <article class="segment-card">
+
+          <div class="segment-number">
+            {{ segment.number }}
+          </div>
+
+          <div class="segment-content">
+
+            <small>
+              CUSTOMER SEGMENT
+            </small>
+
+            <h3>
+              {{ segment.title }}
+            </h3>
+
+            <p>
+              {{ segment.subtitle }}
+            </p>
+
+          </div>
+
+          <span class="segment-arrow">
+            ↗
+          </span>
+
+        </article>
+
+      }
+
+    </div>
+
+
+    <!-- BUYER PANEL -->
+    <div class="buyer-panel">
+
+      <!-- LEFT -->
+      <div class="buyer-message">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <small>
+          WHAT INDUSTRIAL BUYERS NEED
+        </small>
+
+        <h3>
+          Reliable manufacturing starts with
+          <span>clear engineering communication.</span>
+        </h3>
+
+        <p>
+          Drawings, material specifications, quality requirements,
+          production volumes and delivery expectations should all be
+          understood before a component moves into production.
+        </p>
+
+        <div class="buyer-label">
+
+          <span></span>
+
+          <div>
+            <strong>Engineering-first collaboration</strong>
+            <small>FROM ENQUIRY TO PRODUCTION</small>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT -->
+      <div class="trust-panel">
+
+        <div class="trust-heading">
+
+          <small>
+            WHAT WE FOCUS ON
+          </small>
+
+          <strong>
+            Built around professional procurement.
+          </strong>
+
+        </div>
+
+
+        <div class="trust-list">
+
+          <div class="trust-item">
+
+            <span>01</span>
+
+            <div>
+              <strong>Technical Clarity</strong>
+              <p>Drawing and specification-based discussions.</p>
+            </div>
+
+            <i>✓</i>
+
+          </div>
+
+
+          <div class="trust-item">
+
+            <span>02</span>
+
+            <div>
+              <strong>Manufacturing Review</strong>
+              <p>Requirements assessed before production planning.</p>
+            </div>
+
+            <i>✓</i>
+
+          </div>
+
+
+          <div class="trust-item">
+
+            <span>03</span>
+
+            <div>
+              <strong>Quality Documentation</strong>
+              <p>Inspection and documentation aligned with requirements.</p>
+            </div>
+
+            <i>✓</i>
+
+          </div>
+
+
+          <div class="trust-item">
+
+            <span>04</span>
+
+            <div>
+              <strong>Long-Term Supply</strong>
+              <p>Manufacturing relationships built beyond one order.</p>
+            </div>
+
+            <i>✓</i>
+
+          </div>
+
+        </div>
+
+
+        <a href="#rfq" class="trust-cta">
+
+          Discuss Your Requirement
+
+          <span>→</span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

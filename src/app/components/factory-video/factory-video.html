@@ -1,1 +1,153 @@
-<p>factory-video works!</p>
+<section
+  class="factory-video-section"
+  id="factory-video"
+>
+
+  <div class="video-container">
+
+    <!-- HEADER -->
+    <div class="video-header">
+
+      <div>
+
+        <div class="section-label">
+          <span></span>
+          INSIDE THE FOUNDRY
+        </div>
+
+        <h2>
+          Where Engineering
+          <span>Meets Manufacturing.</span>
+        </h2>
+
+      </div>
+
+      <div class="header-copy">
+
+        <p>
+          Take a closer look at the manufacturing environment behind
+          every casting — from molten metal and moulding to finishing,
+          machining and inspection.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- VIDEO -->
+    <div
+      class="video-frame"
+      [class.playing]="isPlaying"
+    >
+
+      <video
+        #factoryVideo
+        preload="metadata"
+        playsinline
+        loop
+        (play)="isPlaying = true"
+        (pause)="isPlaying = false"
+      >
+
+        <source
+          src="/assets/videos/foundry-process.mp4"
+          type="video/mp4"
+        />
+
+      </video>
+
+
+      <!-- VIDEO OVERLAY -->
+      <div class="video-overlay"></div>
+
+
+      <!-- TOP BADGE -->
+      <div class="video-badge">
+
+        <span class="live-dot"></span>
+
+        MANUFACTURING IN MOTION
+
+      </div>
+
+
+      <!-- PLAY BUTTON -->
+      <button
+        type="button"
+        class="play-button"
+        (click)="toggleVideo()"
+        [attr.aria-label]="isPlaying ? 'Pause factory video' : 'Play factory video'"
+      >
+
+        @if (!isPlaying) {
+
+          <svg viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z"></path>
+          </svg>
+
+        } @else {
+
+          <svg viewBox="0 0 24 24">
+            <path d="M7 5h4v14H7z"></path>
+            <path d="M13 5h4v14h-4z"></path>
+          </svg>
+
+        }
+
+      </button>
+
+
+      <!-- BOTTOM CONTENT -->
+      <div class="video-content">
+
+        <div>
+
+          <small>
+            ATANA CASTINGS
+          </small>
+
+          <h3>
+            Inside Our Manufacturing Process
+          </h3>
+
+        </div>
+
+        <span class="video-duration">
+          FACTORY EXPERIENCE
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- BOTTOM -->
+    <div class="video-bottom">
+
+      <div class="video-message">
+
+        <span class="message-line"></span>
+
+        <p>
+          From raw material to finished component —
+          <strong>
+            every stage is driven by process control.
+          </strong>
+        </p>
+
+      </div>
+
+      <a
+        href="#rfq"
+        class="video-cta"
+      >
+        Discuss Your Component
+        <span>→</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>

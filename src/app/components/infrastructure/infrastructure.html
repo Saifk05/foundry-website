@@ -1,1 +1,123 @@
-<p>infrastructure works!</p>
+<section class="infrastructure-section" id="infrastructure">
+
+  <div class="infrastructure-container">
+
+    <!-- HEADER -->
+    <div class="infrastructure-header">
+
+      <div>
+
+        <div class="section-label">
+          <span></span>
+          INFRASTRUCTURE
+        </div>
+
+        <h2>
+          Built for Modern
+          <span>Manufacturing.</span>
+        </h2>
+
+      </div>
+
+      <div class="header-copy">
+
+        <p>
+          Integrated manufacturing infrastructure supporting controlled
+          production from melting and moulding through machining and
+          final inspection.
+        </p>
+
+        <a href="#factory-video">
+          Explore Our Facility
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- IMAGE GRID -->
+    <div class="facility-grid">
+
+      @for (
+        facility of facilities;
+        track facility.number;
+        let first = $first
+      ) {
+
+        <article
+          class="facility-card"
+          [class.facility-main]="first"
+        >
+
+          <img
+            [src]="facility.image"
+            [alt]="facility.title"
+            loading="lazy"
+          />
+
+          <div class="facility-overlay"></div>
+
+          <div class="facility-number">
+            {{ facility.number }}
+          </div>
+
+          <div class="facility-arrow">
+            ↗
+          </div>
+
+          <div class="facility-content">
+
+            <small>
+              MANUFACTURING FACILITY
+            </small>
+
+            <h3>
+              {{ facility.title }}
+            </h3>
+
+            <p>
+              {{ facility.description }}
+            </p>
+
+          </div>
+
+        </article>
+
+      }
+
+    </div>
+
+
+    <!-- ENGINEERING STRIP -->
+    <div class="infrastructure-strip">
+
+      <div class="strip-title">
+
+        <span class="status-dot"></span>
+
+        <div>
+          <small>MANUFACTURING ENVIRONMENT</small>
+
+          <strong>
+            Built around process control and production consistency.
+          </strong>
+        </div>
+
+      </div>
+
+      <div class="strip-items">
+
+        <span>Controlled Production</span>
+        <span>Process Traceability</span>
+        <span>Quality Inspection</span>
+        <span>Scalable Manufacturing</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

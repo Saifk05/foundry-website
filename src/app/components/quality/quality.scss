@@ -1,0 +1,660 @@
+:host {
+  display: block;
+}
+
+.quality-section {
+  position: relative;
+
+  padding: 125px 4%;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 90% 5%,
+      rgba(16, 132, 248, 0.06),
+      transparent 30%
+    ),
+    #f7f9fc;
+}
+
+.quality-container {
+  width: min(1380px, 100%);
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.quality-header {
+  margin-bottom: 55px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(300px, 0.6fr);
+
+  align-items: end;
+
+  gap: 80px;
+}
+
+.section-label {
+  margin-bottom: 18px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  color: #0874df;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2.2px;
+}
+
+.section-label > span {
+  width: 31px;
+  height: 2px;
+
+  border-radius: 20px;
+
+  background: #0879e9;
+}
+
+.quality-header h2 {
+  max-width: 760px;
+
+  color: #091f3a;
+
+  font-size: clamp(43px, 4vw, 62px);
+  font-weight: 800;
+
+  line-height: 1.04;
+
+  letter-spacing: -3px;
+}
+
+.quality-header h2 span {
+  display: block;
+
+  color: #0874df;
+}
+
+.quality-intro {
+  padding-bottom: 4px;
+}
+
+.quality-intro p {
+  color: #748294;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+.quality-intro a {
+  margin-top: 18px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #0874df;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.quality-intro a span {
+  font-size: 16px;
+
+  transition: transform 0.25s ease;
+}
+
+.quality-intro a:hover span {
+  transform: translateX(4px);
+}
+
+
+/* =========================
+   MAIN PANEL
+========================= */
+
+.quality-panel {
+  display: grid;
+
+  grid-template-columns:
+    minmax(360px, 0.85fr)
+    minmax(500px, 1.15fr);
+
+  overflow: hidden;
+
+  border: 1px solid #dbe6ef;
+
+  border-radius: 20px;
+
+  background: #fff;
+
+  box-shadow:
+    0 20px 55px rgba(7, 31, 58, 0.07);
+}
+
+
+/* =========================
+   LEFT
+========================= */
+
+.quality-main {
+  position: relative;
+
+  padding: 55px 50px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #071d35,
+      #0a2948
+    );
+}
+
+.quality-main::before {
+  content: '';
+
+  position: absolute;
+
+  right: -120px;
+  bottom: -150px;
+
+  width: 360px;
+  height: 360px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(31, 145, 255, 0.22),
+      transparent 68%
+    );
+}
+
+.quality-badge {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+}
+
+.badge-icon {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(112, 187, 255, 0.35);
+
+  border-radius: 10px;
+
+  background:
+    rgba(18, 128, 232, 0.13);
+
+  color: #64b8ff;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.quality-badge > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.quality-badge small {
+  color: #66b7ff;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.quality-badge strong {
+  color: rgba(255, 255, 255, 0.83);
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.quality-main h3 {
+  position: relative;
+
+  max-width: 430px;
+
+  margin-top: 60px;
+
+  color: #fff;
+
+  font-size: clamp(36px, 3vw, 50px);
+  font-weight: 800;
+
+  line-height: 1.03;
+
+  letter-spacing: -2.5px;
+}
+
+.quality-main h3 span {
+  display: block;
+
+  color: #56adff;
+}
+
+.quality-main > p {
+  position: relative;
+
+  max-width: 440px;
+
+  margin-top: 20px;
+
+  color: rgba(220, 234, 247, 0.65);
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   FLOW
+========================= */
+
+.quality-flow {
+  position: relative;
+
+  margin-top: 50px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 9px;
+}
+
+.flow-item {
+  padding: 13px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 9px;
+
+  background:
+    rgba(255, 255, 255, 0.04);
+}
+
+.flow-number {
+  color: #56adff;
+
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.flow-item span {
+  color:
+    rgba(238, 246, 255, 0.76);
+
+  font-size: 8px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   QUALITY CONTROLS
+========================= */
+
+.quality-controls {
+  padding: 20px 45px;
+}
+
+.quality-control {
+  min-height: 130px;
+
+  padding: 27px 5px;
+
+  display: grid;
+
+  grid-template-columns:
+    45px
+    minmax(0, 1fr)
+    38px;
+
+  gap: 18px;
+
+  align-items: center;
+
+  border-bottom:
+    1px solid #e3eaf1;
+
+  transition:
+    padding-left 0.3s ease,
+    background 0.3s ease;
+}
+
+.quality-control:last-child {
+  border-bottom: none;
+}
+
+.quality-control:hover {
+  padding-left: 15px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 116, 223, 0.04),
+      transparent
+    );
+}
+
+.control-number {
+  color: #0874df;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.control-content h4 {
+  color: #173650;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  letter-spacing: -0.4px;
+}
+
+.control-content p {
+  max-width: 570px;
+
+  margin-top: 8px;
+
+  color: #7b8998;
+
+  font-size: 9px;
+
+  line-height: 1.7;
+}
+
+.control-check {
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid #cfe4f8;
+
+  border-radius: 50%;
+
+  background: #f1f8ff;
+
+  color: #0878e8;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+.quality-control:hover .control-check {
+  background: #0878e8;
+
+  color: #fff;
+}
+
+
+/* =========================
+   CERTIFICATION STRIP
+========================= */
+
+.certification-strip {
+  margin-top: 20px;
+
+  padding: 23px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  border: 1px solid #dfe8f1;
+
+  border-radius: 14px;
+
+  background: #fff;
+}
+
+.certification-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.certification-icon {
+  width: 44px;
+  height: 44px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 11px;
+
+  background: #eef6ff;
+}
+
+.certification-icon svg {
+  width: 21px;
+  height: 21px;
+
+  fill: none;
+
+  stroke: #0876e5;
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.certification-heading > div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.certification-heading small {
+  color: #8a98a7;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+}
+
+.certification-heading strong {
+  color: #203b57;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.certification-items {
+  display: flex;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.certification-items > div {
+  min-height: 39px;
+
+  padding: 0 12px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  border: 1px solid #dfe7ef;
+
+  border-radius: 8px;
+
+  background: #f9fbfd;
+}
+
+.certification-items span {
+  color: #0874df;
+
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.certification-items strong {
+  color: #64778a;
+
+  font-size: 8px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .quality-header {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .quality-intro {
+    max-width: 650px;
+  }
+
+  .quality-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .quality-main {
+    padding: 50px;
+  }
+
+  .quality-main h3 {
+    margin-top: 40px;
+  }
+
+  .certification-strip {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .certification-items {
+    justify-content: flex-start;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .quality-section {
+    padding: 85px 20px;
+  }
+
+  .quality-header h2 {
+    font-size: 40px;
+
+    letter-spacing: -2px;
+  }
+
+  .quality-main {
+    padding: 35px 25px;
+  }
+
+  .quality-main h3 {
+    font-size: 38px;
+
+    letter-spacing: -2px;
+  }
+
+  .quality-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .quality-controls {
+    padding: 10px 20px;
+  }
+
+  .quality-control {
+    grid-template-columns:
+      32px
+      minmax(0, 1fr)
+      32px;
+
+    gap: 10px;
+  }
+
+  .quality-control:hover {
+    padding-left: 5px;
+  }
+
+  .control-check {
+    width: 30px;
+    height: 30px;
+  }
+
+  .certification-strip {
+    padding: 20px;
+  }
+
+  .certification-items {
+    width: 100%;
+  }
+
+  .certification-items > div {
+    width: 100%;
+  }
+
+}

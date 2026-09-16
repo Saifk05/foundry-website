@@ -1,1 +1,107 @@
-<p>why-us works!</p>
+<section class="why-section" id="why-us">
+
+  <div class="why-container">
+
+    <!-- HEADER -->
+    <div class="why-header">
+
+      <div>
+
+        <div class="section-label">
+          <span></span>
+          WHY WORK WITH US
+        </div>
+
+        <h2>
+          More Than a Foundry.
+          <span>A Manufacturing Partner.</span>
+        </h2>
+
+      </div>
+
+      <div class="header-copy">
+
+        <p>
+          We focus on the complete manufacturing requirement —
+          from engineering input and process planning to production,
+          inspection and supply.
+        </p>
+
+        <a href="#rfq">
+          Start a Conversation
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- ADVANTAGES -->
+    <div class="advantages-grid">
+
+      @for (
+        advantage of advantages;
+        track advantage.number
+      ) {
+
+        <article class="advantage-card">
+
+          <div class="card-top">
+
+            <span class="advantage-number">
+              {{ advantage.number }}
+            </span>
+
+            <span class="card-arrow">
+              ↗
+            </span>
+
+          </div>
+
+          <h3>
+            {{ advantage.title }}
+          </h3>
+
+          <p>
+            {{ advantage.description }}
+          </p>
+
+          <div class="card-line"></div>
+
+        </article>
+
+      }
+
+    </div>
+
+
+    <!-- BOTTOM -->
+    <div class="why-bottom">
+
+      <div class="bottom-copy">
+
+        <div class="bottom-icon">
+          A
+        </div>
+
+        <div>
+          <small>ATANA CASTINGS</small>
+
+          <strong>
+            Engineering relationships built around reliable manufacturing.
+          </strong>
+        </div>
+
+      </div>
+
+      <a href="#rfq" class="why-cta">
+        Request a Quote
+        <span>→</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>

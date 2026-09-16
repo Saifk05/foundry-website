@@ -1,0 +1,620 @@
+:host {
+  display: block;
+}
+
+.clients-section {
+  position: relative;
+
+  padding: 125px 4%;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(8, 116, 223, 0.06),
+      transparent 30%
+    ),
+    #ffffff;
+}
+
+.clients-container {
+  width: min(1380px, 100%);
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.clients-header {
+  margin-bottom: 50px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(300px, 0.6fr);
+
+  align-items: end;
+
+  gap: 80px;
+}
+
+.section-label {
+  margin-bottom: 18px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  color: #0874df;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2.2px;
+}
+
+.section-label > span {
+  width: 31px;
+  height: 2px;
+
+  border-radius: 20px;
+
+  background: #0879e9;
+}
+
+.clients-header h2 {
+  max-width: 850px;
+
+  color: #091f3a;
+
+  font-size: clamp(43px, 4vw, 62px);
+  font-weight: 800;
+
+  line-height: 1.04;
+
+  letter-spacing: -3px;
+}
+
+.clients-header h2 span {
+  display: block;
+
+  color: #0874df;
+}
+
+.header-copy p {
+  color: #748294;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   SEGMENTS
+========================= */
+
+.segment-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  border-top: 1px solid #dfe7ef;
+  border-left: 1px solid #dfe7ef;
+}
+
+.segment-card {
+  position: relative;
+
+  min-height: 190px;
+
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-right: 1px solid #dfe7ef;
+  border-bottom: 1px solid #dfe7ef;
+
+  background: #ffffff;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.segment-card:hover {
+  z-index: 2;
+
+  transform: translateY(-3px);
+
+  background:
+    linear-gradient(
+      145deg,
+      #fbfdff,
+      #f1f8ff
+    );
+}
+
+.segment-number {
+  color: #0874df;
+
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.segment-content small {
+  color: #99a5b0;
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+.segment-content h3 {
+  margin-top: 7px;
+
+  color: #183752;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  letter-spacing: -0.4px;
+}
+
+.segment-content p {
+  margin-top: 7px;
+
+  color: #7e8c99;
+
+  font-size: 8px;
+}
+
+.segment-arrow {
+  position: absolute;
+
+  top: 22px;
+  right: 22px;
+
+  color: #9aa8b5;
+
+  font-size: 13px;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.segment-card:hover .segment-arrow {
+  transform: translate(2px, -2px);
+
+  color: #0874df;
+}
+
+
+/* =========================
+   BUYER PANEL
+========================= */
+
+.buyer-panel {
+  margin-top: 20px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(380px, 0.8fr);
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #061a30;
+
+  box-shadow:
+    0 24px 60px rgba(7, 31, 58, 0.13);
+}
+
+
+/* =========================
+   BUYER MESSAGE
+========================= */
+
+.buyer-message {
+  position: relative;
+
+  min-height: 470px;
+
+  padding: 55px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 100%,
+      rgba(22, 136, 248, 0.18),
+      transparent 35%
+    ),
+    #061a30;
+}
+
+.quote-mark {
+  position: absolute;
+
+  top: 20px;
+  right: 45px;
+
+  color:
+    rgba(75, 168, 255, 0.12);
+
+  font-family: Georgia, serif;
+
+  font-size: 150px;
+  line-height: 1;
+}
+
+.buyer-message > small {
+  position: relative;
+
+  color: #58afff;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.buyer-message h3 {
+  position: relative;
+
+  max-width: 680px;
+
+  margin-top: 35px;
+
+  color: #ffffff;
+
+  font-size: clamp(32px, 3.2vw, 48px);
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  letter-spacing: -2px;
+}
+
+.buyer-message h3 span {
+  color: #58afff;
+}
+
+.buyer-message > p {
+  position: relative;
+
+  max-width: 620px;
+
+  margin-top: 24px;
+
+  color:
+    rgba(215, 230, 244, 0.57);
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   BUYER LABEL
+========================= */
+
+.buyer-label {
+  position: relative;
+
+  margin-top: 55px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.buyer-label > span {
+  width: 35px;
+  height: 2px;
+
+  flex-shrink: 0;
+
+  background: #1688f8;
+}
+
+.buyer-label > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.buyer-label strong {
+  color:
+    rgba(255, 255, 255, 0.85);
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.buyer-label small {
+  color:
+    rgba(104, 184, 255, 0.68);
+
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+
+/* =========================
+   TRUST PANEL
+========================= */
+
+.trust-panel {
+  padding: 45px 40px;
+
+  border-left:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  background:
+    rgba(255, 255, 255, 0.035);
+}
+
+.trust-heading {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.trust-heading small {
+  color: #58afff;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+}
+
+.trust-heading strong {
+  color:
+    rgba(255, 255, 255, 0.88);
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   TRUST LIST
+========================= */
+
+.trust-list {
+  margin-top: 27px;
+
+  border-top:
+    1px solid rgba(255,255,255,0.1);
+}
+
+.trust-item {
+  padding: 17px 0;
+
+  display: grid;
+
+  grid-template-columns:
+    30px
+    minmax(0, 1fr)
+    28px;
+
+  align-items: center;
+
+  gap: 10px;
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.1);
+}
+
+.trust-item > span {
+  color: #58afff;
+
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.trust-item strong {
+  color:
+    rgba(255,255,255,0.83);
+
+  font-size: 9px;
+}
+
+.trust-item p {
+  margin-top: 5px;
+
+  color:
+    rgba(208,225,240,0.45);
+
+  font-size: 7px;
+
+  line-height: 1.5;
+}
+
+.trust-item i {
+  width: 25px;
+  height: 25px;
+
+  display: grid;
+  place-items: center;
+
+  border:
+    1px solid rgba(88,175,255,0.22);
+
+  border-radius: 50%;
+
+  background:
+    rgba(40,143,240,0.08);
+
+  color: #62b5ff;
+
+  font-size: 8px;
+  font-style: normal;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.trust-cta {
+  width: 100%;
+  height: 48px;
+
+  margin-top: 25px;
+
+  padding: 0 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1084f8,
+      #0759c5
+    );
+
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.trust-cta:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(8, 105, 218, 0.25);
+}
+
+.trust-cta span {
+  font-size: 17px;
+
+  transition: transform 0.25s ease;
+}
+
+.trust-cta:hover span {
+  transform: translateX(4px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .clients-header {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .header-copy {
+    max-width: 650px;
+  }
+
+  .segment-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .buyer-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-panel {
+    border-top:
+      1px solid rgba(255,255,255,0.08);
+
+    border-left: none;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .clients-section {
+    padding: 85px 20px;
+  }
+
+  .clients-header h2 {
+    font-size: 40px;
+
+    letter-spacing: -2px;
+  }
+
+  .segment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .segment-card {
+    min-height: 165px;
+  }
+
+  .buyer-panel {
+    border-radius: 16px;
+  }
+
+  .buyer-message {
+    min-height: auto;
+
+    padding: 40px 25px;
+  }
+
+  .quote-mark {
+    top: 15px;
+    right: 20px;
+
+    font-size: 110px;
+  }
+
+  .buyer-message h3 {
+    font-size: 34px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .buyer-label {
+    margin-top: 40px;
+  }
+
+  .trust-panel {
+    padding: 35px 25px;
+  }
+
+}

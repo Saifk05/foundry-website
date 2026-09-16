@@ -1,1 +1,305 @@
-<p>global-presence works!</p>
+<section
+  class="global-section"
+  id="global-presence"
+>
+
+  <div class="global-container">
+
+    <!-- HEADER -->
+    <div class="global-header">
+
+      <div>
+
+        <div class="section-label">
+          <span></span>
+          GLOBAL SUPPLY
+        </div>
+
+        <h2>
+          Manufactured in India.
+          <span>Built for Global Industry.</span>
+        </h2>
+
+      </div>
+
+      <div class="header-copy">
+
+        <p>
+          Supporting engineering and sourcing teams with
+          manufacturing capability, technical collaboration
+          and dependable component supply.
+        </p>
+
+        <a href="#rfq">
+          Discuss Your Requirement
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- GLOBAL PANEL -->
+    <div class="global-panel">
+
+      <!-- MAP -->
+      <div class="map-area">
+
+        <div class="map-grid"></div>
+
+
+        <svg
+          class="world-map"
+          viewBox="0 0 1000 500"
+          aria-hidden="true"
+        >
+
+          <!-- NORTH AMERICA -->
+          <path d="
+            M105 105
+            L155 72
+            L218 82
+            L262 111
+            L247 145
+            L210 154
+            L193 183
+            L160 192
+            L139 167
+            L107 157
+            L84 130
+            Z
+          "></path>
+
+          <path d="
+            M205 185
+            L235 193
+            L248 218
+            L230 236
+            L207 219
+            L190 201
+            Z
+          "></path>
+
+
+          <!-- SOUTH AMERICA -->
+          <path d="
+            M268 250
+            L307 240
+            L338 266
+            L330 306
+            L312 340
+            L303 384
+            L280 422
+            L262 392
+            L267 348
+            L249 309
+            L250 276
+            Z
+          "></path>
+
+
+          <!-- EUROPE -->
+          <path d="
+            M455 119
+            L486 105
+            L518 113
+            L535 135
+            L514 150
+            L487 145
+            L467 156
+            L444 141
+            Z
+          "></path>
+
+
+          <!-- AFRICA -->
+          <path d="
+            M468 184
+            L520 174
+            L557 203
+            L552 257
+            L528 311
+            L493 329
+            L466 296
+            L449 245
+            Z
+          "></path>
+
+
+          <!-- ASIA -->
+          <path d="
+            M535 110
+            L610 82
+            L699 91
+            L770 119
+            L806 154
+            L771 184
+            L716 172
+            L678 198
+            L626 184
+            L590 156
+            L545 154
+            Z
+          "></path>
+
+          <path d="
+            M625 185
+            L657 193
+            L674 224
+            L650 252
+            L627 226
+            L610 204
+            Z
+          "></path>
+
+
+          <!-- AUSTRALIA -->
+          <path d="
+            M773 325
+            L820 307
+            L863 325
+            L875 360
+            L843 384
+            L793 377
+            L764 350
+            Z
+          "></path>
+
+        </svg>
+
+
+        <!-- CONNECTION LINES -->
+        <svg
+          class="connection-lines"
+          viewBox="0 0 1000 500"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+
+          <path
+            d="M655 218 Q540 85 482 132">
+          </path>
+
+          <path
+            d="M655 218 Q390 50 180 142">
+          </path>
+
+          <path
+            d="M655 218 Q760 250 820 344">
+          </path>
+
+          <path
+            d="M655 218 Q510 290 510 248">
+          </path>
+
+        </svg>
+
+
+        <!-- INDIA -->
+        <div class="location india">
+          <span class="pulse"></span>
+
+          <div class="location-label">
+            <small>MANUFACTURING BASE</small>
+            <strong>INDIA</strong>
+          </div>
+        </div>
+
+
+        <!-- EUROPE -->
+        <div class="location europe">
+          <span></span>
+        </div>
+
+
+        <!-- AMERICAS -->
+        <div class="location america">
+          <span></span>
+        </div>
+
+
+        <!-- AUSTRALIA -->
+        <div class="location australia">
+          <span></span>
+        </div>
+
+
+        <div class="map-caption">
+          <small>GLOBAL MANUFACTURING MINDSET</small>
+
+          <strong>
+            Engineering locally. Thinking globally.
+          </strong>
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT -->
+      <div class="global-content">
+
+        <div class="global-eyebrow">
+          INTERNATIONAL BUSINESS
+        </div>
+
+        <h3>
+          Ready to Support
+          <span>Global Requirements.</span>
+        </h3>
+
+        <p class="global-description">
+          From technical discussions and drawing reviews to
+          manufacturing planning and documentation, our approach
+          is designed for professional B2B collaboration.
+        </p>
+
+
+        <div class="global-capabilities">
+
+          @for (
+            capability of capabilities;
+            track capability.number
+          ) {
+
+            <article class="global-capability">
+
+              <span>
+                {{ capability.number }}
+              </span>
+
+              <div>
+
+                <strong>
+                  {{ capability.title }}
+                </strong>
+
+                <p>
+                  {{ capability.description }}
+                </p>
+
+              </div>
+
+            </article>
+
+          }
+
+        </div>
+
+
+        <a
+          href="#rfq"
+          class="global-cta"
+        >
+          Start a Global Enquiry
+
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>  

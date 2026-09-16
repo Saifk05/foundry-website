@@ -1,1 +1,499 @@
-<p>rfq works!</p>
+<section class="rfq-section" id="rfq">
+
+  <div class="rfq-container">
+
+    <!-- LEFT -->
+    <div class="rfq-intro">
+
+      <div class="section-label">
+        <span></span>
+        REQUEST FOR QUOTATION
+      </div>
+
+      <h2>
+        Have a Component
+        <span>Ready to Manufacture?</span>
+      </h2>
+
+      <p class="intro-text">
+        Share your drawing and basic project requirements.
+        Our engineering team can review the component and
+        manufacturing requirements.
+      </p>
+
+
+      <div class="rfq-points">
+
+        <div class="rfq-point">
+
+          <span>01</span>
+
+          <div>
+            <strong>Upload Your Drawing</strong>
+            <p>Share PDF, STEP, STP, DWG or other available technical files.</p>
+          </div>
+
+        </div>
+
+        <div class="rfq-point">
+
+          <span>02</span>
+
+          <div>
+            <strong>Tell Us the Requirement</strong>
+            <p>Provide material, component weight and expected production volume.</p>
+          </div>
+
+        </div>
+
+        <div class="rfq-point">
+
+          <span>03</span>
+
+          <div>
+            <strong>Engineering Review</strong>
+            <p>Your requirement can then be evaluated for manufacturing feasibility.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="secure-note">
+
+        <div class="secure-icon">
+
+          <svg viewBox="0 0 24 24">
+            <rect
+              x="5"
+              y="10"
+              width="14"
+              height="10"
+              rx="2">
+            </rect>
+
+            <path d="M8 10V7a4 4 0 018 0v3"></path>
+          </svg>
+
+        </div>
+
+        <div>
+          <small>CONFIDENTIAL ENGINEERING DATA</small>
+
+          <strong>
+            Drawing confidentiality can be handled according to project requirements.
+          </strong>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- FORM -->
+    <div class="rfq-form-shell">
+
+      @if (!submitted) {
+
+        <div class="form-header">
+
+          <div>
+            <small>NEW MANUFACTURING ENQUIRY</small>
+            <h3>Tell us about your component.</h3>
+          </div>
+
+          <span class="form-step">
+            RFQ
+          </span>
+
+        </div>
+
+
+        <form
+          class="rfq-form"
+          (ngSubmit)="submitRfq()"
+        >
+
+          <!-- CONTACT -->
+          <div class="form-section">
+
+            <div class="form-section-title">
+              <span>01</span>
+
+              <div>
+                <strong>Contact Information</strong>
+                <small>Who should we contact about this requirement?</small>
+              </div>
+            </div>
+
+
+            <div class="form-grid">
+
+              <div class="form-field">
+
+                <label for="rfq-name">
+                  Full Name *
+                </label>
+
+                <input
+                  id="rfq-name"
+                  type="text"
+                  name="name"
+                  [(ngModel)]="form.name"
+                  placeholder="Your name"
+                  required
+                />
+
+              </div>
+
+
+              <div class="form-field">
+
+                <label for="rfq-company">
+                  Company
+                </label>
+
+                <input
+                  id="rfq-company"
+                  type="text"
+                  name="company"
+                  [(ngModel)]="form.company"
+                  placeholder="Company name"
+                />
+
+              </div>
+
+
+              <div class="form-field">
+
+                <label for="rfq-email">
+                  Business Email *
+                </label>
+
+                <input
+                  id="rfq-email"
+                  type="email"
+                  name="email"
+                  [(ngModel)]="form.email"
+                  placeholder="name@company.com"
+                  required
+                />
+
+              </div>
+
+
+              <div class="form-field">
+
+                <label for="rfq-phone">
+                  Phone
+                </label>
+
+                <input
+                  id="rfq-phone"
+                  type="tel"
+                  name="phone"
+                  [(ngModel)]="form.phone"
+                  placeholder="+91"
+                />
+
+              </div>
+
+
+              <div class="form-field full-field">
+
+                <label for="rfq-country">
+                  Country / Region
+                </label>
+
+                <input
+                  id="rfq-country"
+                  type="text"
+                  name="country"
+                  [(ngModel)]="form.country"
+                  placeholder="Country"
+                />
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- COMPONENT -->
+          <div class="form-section">
+
+            <div class="form-section-title">
+
+              <span>02</span>
+
+              <div>
+                <strong>Component Requirement</strong>
+                <small>Basic information about the casting.</small>
+              </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+              <div class="form-field full-field">
+
+                <label for="rfq-component">
+                  Component / Part Name *
+                </label>
+
+                <input
+                  id="rfq-component"
+                  type="text"
+                  name="component"
+                  [(ngModel)]="form.component"
+                  placeholder="Example: Gear housing"
+                  required
+                />
+
+              </div>
+
+
+              <div class="form-field">
+
+                <label for="rfq-material">
+                  Material Grade
+                </label>
+
+                <select
+                  id="rfq-material"
+                  name="material"
+                  [(ngModel)]="form.material"
+                >
+                  <option value="">
+                    Select material
+                  </option>
+
+                  <option value="Grey Iron">
+                    Grey Iron
+                  </option>
+
+                  <option value="Ductile / SG Iron">
+                    Ductile / SG Iron
+                  </option>
+
+                  <option value="Other">
+                    Other / Specify
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <div class="form-field">
+
+                <label for="rfq-weight">
+                  Approx. Weight
+                </label>
+
+                <input
+                  id="rfq-weight"
+                  type="text"
+                  name="weight"
+                  [(ngModel)]="form.weight"
+                  placeholder="Example: 8 kg"
+                />
+
+              </div>
+
+
+              <div class="form-field full-field">
+
+                <label for="rfq-quantity">
+                  Annual Quantity
+                </label>
+
+                <input
+                  id="rfq-quantity"
+                  type="text"
+                  name="quantity"
+                  [(ngModel)]="form.quantity"
+                  placeholder="Example: 20,000 pieces / year"
+                />
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- DRAWING -->
+          <div class="form-section">
+
+            <div class="form-section-title">
+
+              <span>03</span>
+
+              <div>
+                <strong>Drawing & Specifications</strong>
+                <small>Attach available technical documentation.</small>
+              </div>
+
+            </div>
+
+
+            <label
+              class="upload-zone"
+              for="drawing-upload"
+            >
+
+              <input
+                id="drawing-upload"
+                type="file"
+                accept=".pdf,.step,.stp,.dwg,.dxf,.jpg,.jpeg,.png"
+                (change)="onFileSelected($event)"
+              />
+
+
+              @if (!selectedFile) {
+
+                <div class="upload-icon">
+
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 16V4"></path>
+                    <path d="M7 9l5-5 5 5"></path>
+                    <path d="M5 15v4h14v-4"></path>
+                  </svg>
+
+                </div>
+
+                <strong>
+                  Upload component drawing
+                </strong>
+
+                <p>
+                  Click to choose your technical file
+                </p>
+
+                <small>
+                  PDF · STEP · STP · DWG · DXF · JPG · PNG
+                </small>
+
+              } @else {
+
+                <div class="file-selected">
+
+                  <div class="file-icon">
+                    ✓
+                  </div>
+
+                  <div>
+                    <strong>
+                      {{ selectedFile.name }}
+                    </strong>
+
+                    <small>
+                      Drawing attached
+                    </small>
+                  </div>
+
+                </div>
+
+              }
+
+            </label>
+
+
+            @if (selectedFile) {
+
+              <button
+                type="button"
+                class="remove-file"
+                (click)="removeFile()"
+              >
+                Remove file
+              </button>
+
+            }
+
+
+            <div class="form-field message-field">
+
+              <label for="rfq-message">
+                Additional Information
+              </label>
+
+              <textarea
+                id="rfq-message"
+                name="message"
+                [(ngModel)]="form.message"
+                placeholder="Material specification, tolerances, machining requirements, target delivery or any other project details..."
+              ></textarea>
+
+            </div>
+
+          </div>
+
+
+          <!-- SUBMIT -->
+          <div class="submit-area">
+
+            <div class="submit-note">
+
+              <span>✓</span>
+
+              <p>
+                Your requirement will be prepared for engineering review.
+              </p>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="submit-button"
+            >
+              Submit Manufacturing Enquiry
+
+              <span>→</span>
+            </button>
+
+          </div>
+
+        </form>
+
+      } @else {
+
+        <!-- SUCCESS -->
+        <div class="success-state">
+
+          <div class="success-icon">
+            ✓
+          </div>
+
+          <small>
+            RFQ RECEIVED
+          </small>
+
+          <h3>
+            Thank you for your enquiry.
+          </h3>
+
+          <p>
+            Your manufacturing requirement has been captured for
+            engineering review.
+          </p>
+
+          <a href="#home">
+            Back to Website
+            <span>→</span>
+          </a>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

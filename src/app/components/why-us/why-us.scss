@@ -1,0 +1,531 @@
+:host {
+  display: block;
+}
+
+.why-section {
+  position: relative;
+
+  padding: 125px 4%;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+.why-section::before {
+  content: '';
+
+  position: absolute;
+
+  left: -220px;
+  bottom: -250px;
+
+  width: 600px;
+  height: 600px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(8, 116, 223, 0.06),
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
+
+.why-container {
+  position: relative;
+
+  width: min(1380px, 100%);
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.why-header {
+  margin-bottom: 55px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(300px, 0.6fr);
+
+  align-items: end;
+
+  gap: 80px;
+}
+
+.section-label {
+  margin-bottom: 18px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  color: #0874df;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2.2px;
+}
+
+.section-label > span {
+  width: 31px;
+  height: 2px;
+
+  border-radius: 20px;
+
+  background: #0879e9;
+}
+
+.why-header h2 {
+  max-width: 800px;
+
+  color: #091f3a;
+
+  font-size: clamp(43px, 4vw, 62px);
+  font-weight: 800;
+
+  line-height: 1.04;
+
+  letter-spacing: -3px;
+}
+
+.why-header h2 span {
+  display: block;
+
+  color: #0874df;
+}
+
+.header-copy {
+  padding-bottom: 4px;
+}
+
+.header-copy p {
+  color: #748294;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+.header-copy a {
+  margin-top: 18px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #0874df;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.header-copy a span {
+  font-size: 16px;
+
+  transition: transform 0.25s ease;
+}
+
+.header-copy a:hover span {
+  transform: translateX(4px);
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.advantages-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  border-top: 1px solid #dfe7ef;
+  border-left: 1px solid #dfe7ef;
+}
+
+.advantage-card {
+  position: relative;
+
+  min-height: 265px;
+
+  padding: 31px;
+
+  overflow: hidden;
+
+  border-right: 1px solid #dfe7ef;
+  border-bottom: 1px solid #dfe7ef;
+
+  background: #ffffff;
+
+  transition:
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+
+.advantage-card::before {
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #0878e8,
+      #59afff
+    );
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: transform 0.35s ease;
+}
+
+.advantage-card:hover {
+  background:
+    linear-gradient(
+      145deg,
+      #fbfdff,
+      #f4f9fe
+    );
+
+  transform: translateY(-3px);
+}
+
+.advantage-card:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* =========================
+   TOP
+========================= */
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.advantage-number {
+  color: #0874df;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.card-arrow {
+  width: 35px;
+  height: 35px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid #dbe5ee;
+
+  border-radius: 50%;
+
+  color: #71869a;
+
+  font-size: 13px;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.advantage-card:hover .card-arrow {
+  transform: translate(2px, -2px);
+
+  border-color: #0878e8;
+
+  background: #0878e8;
+
+  color: #ffffff;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.advantage-card h3 {
+  max-width: 300px;
+
+  margin-top: 45px;
+
+  color: #173650;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.6px;
+}
+
+.advantage-card p {
+  max-width: 340px;
+
+  margin-top: 13px;
+
+  color: #788796;
+
+  font-size: 9px;
+
+  line-height: 1.75;
+}
+
+.card-line {
+  width: 30px;
+  height: 2px;
+
+  margin-top: 28px;
+
+  border-radius: 10px;
+
+  background: #dce6ef;
+
+  transition: width 0.35s ease;
+}
+
+.advantage-card:hover .card-line {
+  width: 55px;
+
+  background: #0878e8;
+}
+
+
+/* =========================
+   BOTTOM
+========================= */
+
+.why-bottom {
+  margin-top: 25px;
+
+  padding: 21px 22px 21px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  border: 1px solid #dfe8f1;
+
+  border-radius: 14px;
+
+  background: #f8fafc;
+}
+
+.bottom-copy {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.bottom-icon {
+  width: 44px;
+  height: 44px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1084f8,
+      #0759c5
+    );
+
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.bottom-copy > div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.bottom-copy small {
+  color: #0874df;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+}
+
+.bottom-copy strong {
+  color: #203b57;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.why-cta {
+  min-width: 185px;
+  height: 48px;
+
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1084f8,
+      #0759c5
+    );
+
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  box-shadow:
+    0 9px 22px rgba(8, 103, 216, 0.17);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.why-cta:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 28px rgba(8, 103, 216, 0.25);
+}
+
+.why-cta span {
+  font-size: 17px;
+
+  transition: transform 0.25s ease;
+}
+
+.why-cta:hover span {
+  transform: translateX(4px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 950px) {
+
+  .why-header {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .header-copy {
+    max-width: 650px;
+  }
+
+  .advantages-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .why-section {
+    padding: 85px 20px;
+  }
+
+  .why-header {
+    margin-bottom: 40px;
+  }
+
+  .why-header h2 {
+    font-size: 40px;
+
+    letter-spacing: -2px;
+  }
+
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advantage-card {
+    min-height: 235px;
+
+    padding: 25px;
+  }
+
+  .advantage-card h3 {
+    margin-top: 35px;
+
+    font-size: 19px;
+  }
+
+  .why-bottom {
+    align-items: stretch;
+    flex-direction: column;
+
+    padding: 20px;
+  }
+
+  .bottom-copy {
+    align-items: flex-start;
+  }
+
+  .why-cta {
+    width: 100%;
+  }
+
+}

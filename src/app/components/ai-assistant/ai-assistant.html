@@ -1,1 +1,203 @@
-<p>ai-assistant works!</p>
+<section
+  class="ai-section"
+  id="ai-assistant"
+>
+
+  <div class="ai-container">
+
+    <!-- LEFT -->
+    <div class="ai-intro">
+
+      <div class="section-label">
+        <span></span>
+        FOUNDRY ASSISTANT
+      </div>
+
+      <h2>
+        Have a Casting
+        <span>Requirement?</span>
+      </h2>
+
+      <p>
+        Ask about materials, manufacturing capabilities,
+        machining or your component requirement before
+        submitting an RFQ.
+      </p>
+
+
+      <div class="ai-feature">
+
+        <div class="feature-icon">
+          AI
+        </div>
+
+        <div>
+          <small>ENGINEERING ASSISTANCE</small>
+
+          <strong>
+            Start with your component.
+          </strong>
+
+          <p>
+            Tell us what you're sourcing and we'll guide you
+            toward the information required for manufacturing review.
+          </p>
+        </div>
+
+      </div>
+
+
+      <a
+        href="#rfq"
+        class="drawing-link"
+      >
+        Already have a drawing?
+
+        <strong>
+          Upload it directly
+          <span>→</span>
+        </strong>
+      </a>
+
+    </div>
+
+
+    <!-- CHAT -->
+    <div class="chat-shell">
+
+      <!-- CHAT HEADER -->
+      <div class="chat-header">
+
+        <div class="assistant-profile">
+
+          <div class="assistant-logo">
+            A
+          </div>
+
+          <div>
+            <strong>
+              ATANA Foundry Assistant
+            </strong>
+
+            <span>
+              <i></i>
+              Online
+            </span>
+          </div>
+
+        </div>
+
+        <div class="ai-badge">
+          AI ASSISTANT
+        </div>
+
+      </div>
+
+
+      <!-- MESSAGES -->
+      <div class="chat-body">
+
+        <div class="chat-date">
+          MANUFACTURING ASSISTANCE
+        </div>
+
+        <div class="messages">
+
+          @for (
+            chat of messages;
+            track $index
+          ) {
+
+            <div
+              class="message-row"
+              [class.user-row]="chat.sender === 'user'"
+            >
+
+              @if (chat.sender === 'ai') {
+
+                <div class="message-avatar">
+                  A
+                </div>
+
+              }
+
+              <div
+                class="message"
+                [class.ai-message]="chat.sender === 'ai'"
+                [class.user-message]="chat.sender === 'user'"
+              >
+                {{ chat.text }}
+              </div>
+
+            </div>
+
+          }
+
+        </div>
+
+
+        <!-- QUICK QUESTIONS -->
+        <div class="quick-area">
+
+          <small>
+            QUICK QUESTIONS
+          </small>
+
+          <div class="suggestions">
+
+            @for (
+              suggestion of suggestions;
+              track suggestion
+            ) {
+
+              <button
+                type="button"
+                (click)="sendSuggestion(suggestion)"
+              >
+                {{ suggestion }}
+              </button>
+
+            }
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- INPUT -->
+      <div class="chat-input">
+
+        <input
+          type="text"
+          [(ngModel)]="message"
+          placeholder="Ask about your casting requirement..."
+          (keyup.enter)="sendMessage()"
+        />
+
+        <button
+          type="button"
+          class="send-button"
+          aria-label="Send message"
+          (click)="sendMessage()"
+        >
+          <svg viewBox="0 0 24 24">
+            <path d="M4 4l17 8-17 8 3-8z"></path>
+            <path d="M7 12h14"></path>
+          </svg>
+        </button>
+
+      </div>
+
+
+      <!-- DISCLAIMER -->
+      <div class="chat-footer">
+        Demo assistant · Final manufacturing feasibility requires engineering review.
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
